@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+<link rel="stylesheet" href="recursos/css/bootstrap.min.css">
+<!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css">-->
+<script src="recursos/js/angular.min.js"></script>
+	<title>Gestion de documentos</title>
+</head>
+<body>
+	<div class="container" ng-controller="myCtrl">
+
+    <h1 align="center">Formulario de Personas Sistemas Distribuidos</h1>
+
+    
+    <form class="form-horizontal">
+    <div class="form-group">
+      <label>Nombres:</label>
+      <input type="name" class="form-control" ng-model="document.nombre">
+    </div>
+    <div class="form-group">
+      <label>1er Apellido:</label>
+      <input type="text" class="form-control" ng-model="document.apellido1">
+    </div>
+    <div class="form-group">
+      <label>2do Apellido:</label>
+      <input type="text" class="form-control" ng-model="document.apellido2">
+    </div>
+    <div class="form-group">
+      <label>L. Nacimiento:</label>
+      <input type="text" class="form-control" ng-model="document.lugarn">
+    </div>
+    <div class="form-group">
+      <label for="name">Fecha Nac.:</label>
+      <input type="date" class="form-control" ng-model="document.fecha">
+    </div>
+    <div class="form-group">
+      <label>Direccion:</label>
+      <input type="text" class="form-control" ng-model="document.direccion">
+    </div>
+    <div class="form-group">
+      <label>Telefono</label>
+      <input type="phone" class="form-control" ng-model="document.telefono">
+    </div>
+    <div class="form-group">
+      <label>Correo:</label>
+      <input type="email" class="form-control" ng-model="document.correo">
+    </div>
+    <div class="form-group">
+      <label for="name">Profesion:</label>
+      <input type="text" class="form-control" ng-model="document.profesion">
+    </div>
+    <div class="form-group">
+      <label>Especialidad:</label>
+      <input type="text" class="form-control" ng-model="document.area">
+    </div>
+</br>
+    <button class="btn btn-primary" ng-click="addDocument()">Aregar Contacto</button>
+    <button class="btn btn-info" ng-click="update()">Subir</button>
+    <button class="btn btn-info" ng-click="deselect()">Limpiar</button>
+  </form>
+		<h1>Lista de personas</h1>
+		<table class="table">
+			<thead>
+				<tr>
+					<th>Nombre</th>
+					<th>1er Apellido</th>
+					<th>2do Apellido</th>
+					<th>Accion</th>
+					<th>&nbsp;</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr ng-repeat="document in gesdocument">
+		          <td>{{document.nombre}}</td>
+		          <td>{{document.apellido1}}</td>
+		          <td>{{document.apellido2}}</td>
+		          <td><button class="btn btn-danger" ng-click="remove(document._id)">Eliminar</button></td>
+		          <td><button class="btn btn-warning" ng-click="edit(document._id)">Editar</button></td>
+				</tr>
+			</tbody>
+
+		</table>
+
+	</div>
+</body>
+<script src="controllers/controller.js"></script>
+<!--<script src="js/myCtrl.js"></script>-->
+</html>

@@ -1,0 +1,8 @@
+Arquitectura MEAN (Mongo no SQL también acepta bases de datos SQL) (MongoDB, Express, AngularJS, NodeJS)
+1.- Características de MEAN (escalabilidad, robusta, seguridad, reusabilidad) + Presentación ppt
+2.- Análisis de requerimiento para el proyecto (Elicitación, Educción, Especificación) + Presentación ppt
+3.- Diagramas (clases, secuencia, proceso, casos de uso) + Presentación ppt
+4.- Prototipos (interfaces) + Presentación ppt
+5.- Implementación (documentación) + Presentación ppt
+6.-Pruebas (caja negra) + Presentación ppt
+7.-Desplegar en la nube (Heroku) + Presentación ppt
